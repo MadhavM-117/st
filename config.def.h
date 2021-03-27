@@ -5,15 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-/* Spare fonts */
-static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
-};
-
+static char *font = "JetBrains Mono:pixelsize=22:antialias=true:autohint=true";
 static int borderpx = 2;
 
+static char *font2[] = { "PowerlineSymbols:pixelsize=22:antialias=true:autohint=true" }; 
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e

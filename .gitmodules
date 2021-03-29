@@ -1,0 +1,3 @@
+[submodule "libxft"]
+	path = libxft
+	url = git@github.com:MadhavM-117/libxft.git

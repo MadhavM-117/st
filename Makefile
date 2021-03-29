@@ -29,6 +29,10 @@ $(OBJ): config.h config.mk
 st: $(OBJ)
 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
 
+xft:
+	cd libxft && sh autogen.sh --sysconfdir=/etc --prefix=$(HOME)/.local --mandir=$(HOME)/.local/share/man
+	$(MAKE) -C libxft/ uninstall clean install
+
 clean:
 	rm -f st $(OBJ) st-$(VERSION).tar.gz
 
@@ -40,7 +44,7 @@ dist: clean
 	tar -cf - st-$(VERSION) | gzip > st-$(VERSION).tar.gz
 	rm -rf st-$(VERSION)
 
-install: st
+install: st xft
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp -f st $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/st

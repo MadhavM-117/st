@@ -8,7 +8,10 @@
 static char *font = "JetBrains Mono:pixelsize=22:antialias=true:autohint=true";
 static int borderpx = 2;
 
-static char *font2[] = { "DejaVu Sans:pixelsize=22:antialias=true:autohint=true" }; 
+static char *font2[] = { 
+	"Noto Color Emoji:pixelsize=22:antialias=true:autohint=true", 
+	"DejaVu Sans:pixelsize=22:antialias=true:autohint=true" 
+}; 
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e

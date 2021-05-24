@@ -21,7 +21,7 @@ INCS = -I$(HOMEINC) \
        `$(PKG_CONFIG) --cflags fontconfig` \
        `$(PKG_CONFIG) --cflags freetype2`
 LIBS = -L$(HOMELIB) -Wl,-rpath,$(HOMELIB) -lXft \
-       -L$(X11LIB) -lm -lrt -lX11 -lutil \
+       -L$(X11LIB) -lm -lrt -lX11 -lutil -lXrender \
        `$(PKG_CONFIG) --libs fontconfig` \
        `$(PKG_CONFIG) --libs freetype2`
 
